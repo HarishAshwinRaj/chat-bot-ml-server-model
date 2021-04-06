@@ -51,16 +51,16 @@ def loadfiles():
     print(type(s))
     s,j = os.path.split(s)
     print(s)
-    with open(s+'\\mlmodel\\intents.json') as i:
+    with open(s+'/mlmodel/intents.json') as i:
         data = json.load(i)
-    with open(s+'\\mlmodel\\words.json') as f:
+    with open(s+'/mlmodel/words.json') as f:
         w = json.load(f)
     words = w
-    with open(s+'\\mlmodel\\labels.json') as g:
+    with open(s+'/mlmodel/labels.json') as g:
         datas = json.load(g)
     labels = datas
     model = model_assembler(len(words),len(labels))
-    model.load(s+"\\mlmodel\\model.tflearn")
+    model.load(s+"/mlmodel/model.tflearn")
     return words,labels,data,model
 # list of words are required so please do it nexttime remainder
 

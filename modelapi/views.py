@@ -4,7 +4,7 @@ from django.http import HttpResponse,JsonResponse
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.csrf import csrf_exempt
 import json
-
+from .models import Question
 
 '''
 remeber to send the request in json information
@@ -14,8 +14,8 @@ import nltk
 #nltk.download('punkt')
 """ check wether punkt is already present and trying to download if not present"""
 try:
-    print("resourse punkt found ")
     nltk.data.find('tokenizers/punkt')
+    print("resourse punkt found ")
 except LookupError:
     print("punkt is downloading")
     nltk.download('punkt')
@@ -116,6 +116,18 @@ def posthandler(request):
     print ("helll")
     received_json_data = json.loads(request.body.decode("utf-8"))
     print(received_json_data['question'])
-    answer = chat(received_json_data["question"])
+    # find whether data is present in the data base
+    # checking whether the data is present or not
+    rquery =received_json_data['question']
+    try:
+        obj = Question.objects.get(query = rquery)
+        c = obj.counter()
+        print(c," count")
+        Question.objects.filter(query = rquery).update(count = c+1)
+    except Question.DoesNotExist:
+        obj = Question(query = rquery)
+        obj.save()
+    #Question.objects.all().filter(query = question)
+    answer = chat(rquery)
     resp = {'answer':answer}
     return JsonResponse(resp)

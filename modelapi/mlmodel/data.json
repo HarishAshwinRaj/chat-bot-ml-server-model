@@ -1,0 +1,270 @@
+{
+   "intents":[
+      {
+         "tag":"memory",
+         "patterns":[
+            "Expandable memory?",
+            "What about memory?",
+            "Is it expandable memory?"
+         ],
+         "responses":[
+            "No, SD card slot not available.",
+            "It has 128GB internal memory and external memory is not supported.",
+            "No, It comes with 128GB internal memory."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"network",
+         "patterns":[
+            "Is it support dual 5G?",
+            "Support 4G sim?",
+            "Is Dual sim 4G?",
+            "Is 5G volte or only LTE ?"
+         ],
+         "responses":[
+            "Yes, Orange A1 support 5G in both SIM slot.",
+            " Yes.",
+            "Yes, it supports both 4G and 5G.",
+            "Orange A1 comes with dual 5G as well as VOLTE."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"safety",
+         "patterns":[
+            "Gorilla glass protection?",
+            "What is the front and back glass made of?"
+         ],
+         "responses":[
+            "Yes, It is protected with gorilla glass 5.",
+            "It is made up of corning gorilla glass 5.O."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"safetyfeatures",
+         "patterns":[
+            "Water resistant?",
+            "Ip rating?"
+         ],
+         "responses":[
+            "No, it is not a water-resisant and it has Ip65 rating.",
+            "It is not water or dust resistant, It comes with Ip65."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"sensors",
+         "patterns":[
+            "Does it has fingerprint sensor",
+            "it has gyroscope sensor?",
+            "Is this phone have IR senssor?",
+            "does orange A1 has IR blaster?"
+         ],
+         "responses":[
+            "yes, It has a rear-mounted fingerprint sensor.",
+            "yes, It comes with gyroscope,proximity,accelerator,lightsensor.",
+            "No, it doesn't support .it comes with gyroscope,proximity,accelerator,light sensor."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"security",
+         "patterns":[
+            "Face unlock available?",
+            "fingerprint available?",
+            "noise cancellation available?"
+         ],
+         "responses":[
+            "Yes, It has.",
+            "Yes, It has.",
+            "Yes, It has."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"type",
+         "patterns":[
+            "Frame metal or plastic?",
+            "is it glass body?",
+            "is it mate body?"
+         ],
+         "responses":[
+            "It is made up of Polycarbonate.",
+            "It is made up of Polycarbonate.",
+            "It is made up of Polycarbonate."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"battery",
+         "patterns":[
+            "Orange A1 support wireless charging?",
+            "How many hours of screen on time as battery is just 4350 mAH?",
+            "How long does it take to charge?",
+            "How many hours Battery backup?"
+         ],
+         "responses":[
+            "It doesn't support wireless charging.",
+            "Standby time up to 200 hours.",
+            "It takes 30 minutes to get fully charged ( 0 to 100%).",
+            "The standby time of Orange A1 is upto 200 hours."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"processor",
+         "patterns":[
+            "About processor?",
+            "Which Nm processor?",
+            "What snapdragon in phone?",
+            "About processor?"
+         ],
+         "responses":[
+            "It runs with 845 snapdragon.",
+            "Orange A1 comes with mediatek processor.",
+            "It comes with 845 snapdragon.",
+            "It comes with 845 snapdragon."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"camera",
+         "patterns":[
+            "which camera sensor is used?",
+            "How is the telephoto camera?",
+            "It has moonlight camera or not?"
+         ],
+         "responses":[
+            "It has 64MP main camera+8MP wide angle+2MP Macro+2MP mono(sony IMX 319 sensor)+32MP front camera.",
+            "No,It has 64MP main camera+8MP wide angle+2MP Macro+2MP mono(sony IMX 319 sensor)+32MP front camera."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"minifeatures",
+         "patterns":[
+            "does  it has auto call recording?",
+            "Does orange A1 have front flash?",
+            "Does orange A1 supports VR?"
+         ],
+         "responses":[
+            "No, it won't have"
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"color",
+         "patterns":[
+            "Orange A1 is a galaxy or mat finish?",
+            "This mobile is gole folder?"
+         ],
+         "responses":[
+            "It is a galaxy finish.",
+            "It is a galaxy finish and polycarbonate."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"feature",
+         "patterns":[
+            "Wifi calling available?",
+            "does it has google assistant?",
+            "is it supports casting?.",
+            "Does it support video calling?",
+            "Does it support slow motion?",
+            "Does it supports 4k videos smoothly?",
+            "Does it support wifi 6?",
+            "3.5mm audio jack?",
+            "Does it support OTG?",
+            "Is Orange A1 support dual app?",
+            "Does it comes with screen gurd protector?",
+            "is it compatible with hdmi support?"
+         ],
+         "responses":[
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes.",
+            "Yes."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"design",
+         "patterns":[
+            "Is this Curve mobile?"
+         ],
+         "responses":[
+            "Orange A1 comes with 16.6cm super AMOLED curved FHD."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"bluetooth",
+         "patterns":[
+            "Is it supports sony wc 400 Bluetooth earphones?",
+            "Is it nfc Bluetooth support?",
+            "Is it supports Orange A1 Bluetooth earphones?"
+         ],
+         "responses":[
+            "It supports Bluetooth 5.1 version. Also, it depends upon compatibility.",
+            "The device, Orange A1 5G does not have an NFC feature.",
+            "Yes, it supports"
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"version",
+         "patterns":[
+            "Is this ufs 3.0?"
+         ],
+         "responses":[
+            "No, it is equipped with UFS 2.1."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"global",
+         "patterns":[
+            "Is it working outside of india?",
+            "warranty details for Orange A1?"
+         ],
+         "responses":[
+            "It depends on network frequency",
+            "It comes with 1 year warranty"
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"package",
+         "patterns":[
+            "Includes earphone or not?",
+            "what does the box contains?"
+         ],
+         "responses":[
+            "Orange A1 comes with the earphone and adapter.",
+            "Orange A1 comes with the earphone,18W adapter and 1 year warranty card."
+         ],
+         "context_set":""
+      },
+      {
+         "tag":"payments",
+         "patterns":[
+            "is there EMI option?",
+            "what does the box contains?"
+         ],
+         "responses":[
+            "Yeah.",
+            "Orange A1 comes with the earphone,18W adapter and 1 year warranty card."
+         ],
+         "context_set":""
+      }
+   ]
+}

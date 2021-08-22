@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\ashwi\\Desktop\\projects\\faqresapi\\faqapi\\modelapi\\mlmodel\\model.tflearn"
+all_model_checkpoint_paths: "C:\\Users\\ashwi\\Desktop\\projects\\faqresapi\\faqapi\\modelapi\\mlmodel\\model.tflearn"

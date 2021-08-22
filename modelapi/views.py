@@ -32,6 +32,9 @@ import random
 import json
 import io
 import os
+
+from tensorflow.python.framework import ops
+ops.reset_default_graph()
 def model_assembler(x_size,y_size):
     in_size =x_size
     out_size = y_size
@@ -51,12 +54,14 @@ def loadfiles():
     print(type(s))
     s,j = os.path.split(s)
     print(s)
-    with open(s+'/mlmodel/intents.json') as i:
+    #s+"/mlmodel/model.tflearn"
+    os.path.join (s,"mlmodel","intents.json")
+    with open(s+"/mlmodel/intents.json") as i:
         data = json.load(i)
-    with open(s+'/mlmodel/words.json') as f:
+    with open(s+"/mlmodel/words.json") as f:
         w = json.load(f)
     words = w
-    with open(s+'/mlmodel/labels.json') as g:
+    with open(s+"/mlmodel/labels.json") as g:
         datas = json.load(g)
     labels = datas
     model = model_assembler(len(words),len(labels))
@@ -66,10 +71,8 @@ def loadfiles():
 
 def bag_of_words(s,words):
     bag = [0 for _ in range(len(words))]
-
     s_words = nltk.word_tokenize(s)
     s_words = [stemmer.stem(word.lower()) for word in s_words]
-
     for se in s_words:
         for i, w in enumerate(words):
             if w == se:
@@ -113,12 +116,12 @@ def chat(question):
 @csrf_exempt
 @require_http_methods([ "POST"])
 def posthandler(request):
-    print ("helll")
     received_json_data = json.loads(request.body.decode("utf-8"))
     print(received_json_data['question'])
     # find whether data is present in the data base
     # checking whether the data is present or not
     rquery =received_json_data['question']
+    print("---------operating on the database----------")
     try:
         obj = Question.objects.get(query = rquery)
         c = obj.counter()
@@ -126,8 +129,10 @@ def posthandler(request):
         Question.objects.filter(query = rquery).update(count = c+1)
     except Question.DoesNotExist:
         obj = Question(query = rquery)
+        print("-----created-instance-------")
         obj.save()
     #Question.objects.all().filter(query = question)
+
     answer = chat(rquery)
     resp = {'answer':answer}
     return JsonResponse(resp)

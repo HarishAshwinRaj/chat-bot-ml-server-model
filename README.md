@@ -1,2 +1,2 @@
-# chat-bot-ml-server-model
+# chat-bot-ml-model-server
 ml server model
